@@ -17,12 +17,23 @@ for(var i =0; i <totalCnt; i++)
 	}
 
 	
-	arrayObj[i] = count;
-
-	//console.log("length:"  + length + " have: %:" + 100*count/totalCnt + " " + str)
-	console.log(arrayObj[i]);
+	arrayObj[i] = "length:"  + length + " have: %:" + 100*count/totalCnt;
 }
 
+for(var n= 0; n < arrayObj.length; n++)
+{
+	var temp = arrayObj[n];
+	for(var m= n+1; m < arrayObj.length; m++)
+	{
+		if(temp == arrayObj[m])
+			arrayObj.splice(m,1);
+	}
+	
+}
+for(var k=0 ; k < arrayObj.length; k++)
+{
+	console.log(arrayObj[k]);
+}
 
 
 
